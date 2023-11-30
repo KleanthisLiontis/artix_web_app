@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../todo-react-front-end"
+		},
+		{
+			"path": "../docker_server"
 		}
 	],
 	"settings": {}
