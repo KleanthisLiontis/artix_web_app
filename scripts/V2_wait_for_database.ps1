@@ -11,9 +11,9 @@ function Test-PostgresReadiness {
 
     do {
         Write-Host "Waiting for PostgreSQL to spin up..."
-        Start-Sleep -Seconds 2
+        Start-Sleep -Seconds 4
         $attempt++
-    } until ($attempt -ge $maxAttempts -or (Test-Connection -ComputerName localhost -Port 5432 -Quiet))
+    } until ($attempt -ge $maxAttempts -or (Test-NetConnection -ComputerName localhost -Port 5432 -InformationLevel Quiet))
 
     if ($attempt -ge $maxAttempts) {
         Write-Host "Timed out waiting for PostgreSQL to be ready."
