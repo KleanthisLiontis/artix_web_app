@@ -15,3 +15,8 @@ serde = { version = "1.0.136", features = ["derive"] }
 actix-service = "2.0.2"
 futures = "0.3.29"
 actix-cors = "0.6.4"
+diesel = { version = "2.1.0", features = ["postgres","chrono", 
+                                          "r2d2"] }
+# dotenvy = "0.15.1"
+dotenv = "0.15.0"
+chrono = "0.4.31"
